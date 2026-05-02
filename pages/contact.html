@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactez nous — BIMVIZER</title>
+  <meta name="description" content="Contactez BIMVIZER pour vos projets BIM : modélisation, audit, coordination. Réponse sous 48h.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-coordinates {
+      position: relative;
+      overflow: hidden;
+      background: #4A90E2;
+      color: var(--white);
+      padding: 72px 32px 32px;
+    }
+    .contact-coordinates::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -34px;
+      width: 100%;
+      height: 72px;
+      background: var(--white);
+      transform: skewY(-3deg);
+      transform-origin: left top;
+    }
+    .contact-coordinates h2 {
+      position: relative;
+      color: var(--white);
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    .contact-coordinates p {
+      position: relative;
+      color: var(--white);
+      font-size: 16px;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .contact-coordinates a { color: var(--white); }
+    @media (max-width: 768px) {
+      .contact-page-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-coordinates { padding: 64px 20px 24px; }
+      .contact-coordinates h2 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo-link">
+      <img src="../assets/images/logo-nav.png" alt="BIMVIZER" height="48">
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="../index.html">Accueil</a>
+      <a href="a-propos.html">À propos de nous</a>
+      <div class="nav-dropdown">
+        <a href="services.html">Services</a>
+        <div class="nav-dropdown__menu">
+          <a href="modelisation-3d.html">Modélisation 3D BIM</a>
+          <a href="audit-bim.html">Audit & Contrôle qualité BIM</a>
+          <a href="coordination-bim.html">Coordination BIM</a>
+          <a href="services.html#releve">Relevé / Scan 3D</a>
+        </div>
+      </div>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html" class="active nav-cta">Contactez nous</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> <span>/</span> Contactez nous</p>
+    <h1>Contactez nous</h1>
+    <p>Vous avez un projet BIM&nbsp;? Décrivez-nous votre besoin, nous vous répondons sous 48h.</p>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="section section--white">
+  <div class="container">
+    <div class="contact-page-grid">
+
+      <!-- INFOS -->
+      <div class="contact-coordinates">
+        <h2>Contactez nous</h2>
+        <p><strong>Téléphone:</strong> <a href="tel:+33765829308">07.65.82.93.08</a></p>
+        <p><strong>Courriel:</strong> <a href="mailto:etudes@bimvizer.com">etudes@bimvizer.com</a></p>
+        <p><strong>📍 Localisation :</strong> Basé en France — interventions sur toute la France</p>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div>
+        <h2 style="color:var(--gold);margin-bottom:24px">Envoyez-nous un message</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nom <span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom complet">
+          </div>
+          <div class="form-group">
+            <label for="company">Société</label>
+            <input type="text" id="company" name="company" class="form-control" placeholder="Votre entreprise">
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail <span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" required placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="06 00 00 00 00">
+          </div>
+          <div class="form-group">
+            <label for="subject">Objet <span class="required">*</span></label>
+            <select id="subject" name="subject" class="form-control" required>
+              <option value="">-- Sélectionnez un sujet --</option>
+              <option value="modelisation">Modélisation 3D BIM</option>
+              <option value="audit">Audit & Contrôle qualité BIM</option>
+              <option value="coordination">Coordination BIM</option>
+              <option value="conseil">Conseil & Management BIM</option>
+              <option value="scan">Scan 3D & Relevé numérique</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-control" required placeholder="Décrivez votre projet, les délais, le niveau de détail attendu..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Je consens à ce que ces données soient stockées et traitées dans le but d'établir un contact. Je peux révoquer mon consentement à tout moment. <span class="required">*</span></label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary">Envoyer le message</button>
+          </div>
+          <p class="form-msg" id="form-msg" hidden></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ RAPIDE -->
+<section class="section section--light">
+  <div class="container">
+    <div class="section-title fade-up">
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="values-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="value-card fade-up" style="text-align:left">
+        <h3 style="font-size:18px;margin-bottom:10px">Quels formats de fichiers acceptez-vous&nbsp;?</h3>
+        <p>Nous travaillons avec Revit (.rvt), ArchiCAD (.pln/.pla), IFC 2x3 et IFC 4, DWG/DXF, PDF de plans et nuages de points (.rcp/.e57/.las).</p>
+      </div>
+      <div class="value-card fade-up" style="text-align:left">
+        <h3 style="font-size:18px;margin-bottom:10px">Quel est le délai de réponse pour un devis&nbsp;?</h3>
+        <p>Nous vous répondons sous 48h ouvrées. Pour les projets urgents, contactez-nous directement par téléphone.</p>
+      </div>
+      <div class="value-card fade-up" style="text-align:left">
+        <h3 style="font-size:18px;margin-bottom:10px">Intervenez-vous sur les projets à l'étranger&nbsp;?</h3>
+        <p>Oui, nous pouvons intervenir sur des projets en Europe. Nos livrables sont produits en conformité avec les normes ISO 19650.</p>
+      </div>
+      <div class="value-card fade-up" style="text-align:left">
+        <h3 style="font-size:18px;margin-bottom:10px">Proposez-vous des formations BIM&nbsp;?</h3>
+        <p>Oui, nous animons des formations sur Revit, ArchiCAD, Solibri et sur la mise en place d'une démarche BIM en entreprise. Contactez-nous pour un programme sur mesure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/images/logo-nav.png" alt="BIMVIZER">
+        <p>Bureau d'études spécialisé en BIM&nbsp;— modélisation 3D, audit technique et coordination pour les professionnels du BTP.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos de nous</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Avis juridique</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; Droits d'auteur. Tous droits réservés. BIMVIZER</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="mailto:etudes@bimvizer.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" style="fill:none;stroke:currentColor;stroke-width:2"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.fade-up');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('is-visible'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  var form = document.getElementById('contact-form');
+  var msg  = document.getElementById('form-msg');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    msg.hidden = false;
+    msg.className = 'form-msg form-msg--success';
+    msg.textContent = 'Le message a été envoyé avec succès. Nous vous répondrons sous 48h.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
